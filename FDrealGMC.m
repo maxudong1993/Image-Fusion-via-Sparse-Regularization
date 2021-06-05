@@ -7,14 +7,17 @@ getd = @(p)path(p,path);
 getd('Metrics/');
 addpath('utilities/');
 
-resultDir = '/Users/eexna/Work/Ultrasound imaging/Fusion/Rencheng Report/results/';
-seq = 'slika';
+resultDir = '/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/results/';
+seq = 'clocks';
 
 %original image data
 z2colour = [];
 if strcmp(seq, 'clocks')
-    z1 = im2double(imread('/Users/eexna/Work/Ultrasound imaging/Fusion/Rencheng Report/data/clocks/clockA.jpg'));
-    z2 = im2double(imread('/Users/eexna/Work/Ultrasound imaging/Fusion/Rencheng Report/data/clocks/clockB.jpg'));
+    z1 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockA.jpg'));
+    z2 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockB.jpg'));
+% elseif strcmp(seq, 'ICPR')
+%     z1 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/ICPR/VIS1.png'));
+%     z2 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/ICPR/IR1.png'));
 elseif strcmp(seq,'Bild2')
     commondir = '/Users/eexna/Work/Ultrasound imaging/Fusion/data/bild/';
     z1 = im2double(imread([commondir,'Bild2_ir_wh.bmp']));
