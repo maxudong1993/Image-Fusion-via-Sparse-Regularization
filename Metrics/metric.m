@@ -1,4 +1,5 @@
 clear all;
+addpath('metrics/MI/');
 
 % read image info;
 % origImgs  = cell(1,totalImg);
@@ -8,8 +9,8 @@ clear all;
 %     origImgs{k} = im2double(imread([folder, files(k).name]));
 % end
 
- input1 = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\DataBase\dstl data\downsample1st\IR0010.bmp'));
- input2= im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\DataBase\dstl data\downsample1st\VI0010.bmp'));
+ input1 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockA.jpg'));
+ input2= im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockB.jpg'));
 
 % input1 = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\datafusion\1810i.bmp'));
 % input2 = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\datafusion\1810v.bmp'));
@@ -20,7 +21,7 @@ clear all;
     
 %fusedImg = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\fusion sr code\fused&sred\0010srfuse.bmp'));
 
-fusedImg = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\result\after\GG_00010.bmp'));
+fusedImg = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/results/clocks/clockslam0.005.png'));
 
 % % quality assessment
 %     % ---------------------------------------------------------------------
@@ -29,7 +30,10 @@ fusedImg = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\D
 %     % Petrovic and Xydeas Metric
 %     quality_petrovic(method) = petmetric(origImgs, fusedImg);
     % Piella's Quality Index
-     imqmet(origImgs, fusedImg)
+    Pe = petmetric(origImgs, fusedImg)
+    MI = mif(origImgs,fusedImg)
+    Q = imqmet(origImgs, fusedImg)
+    CM = Cvejic_metric(origImgs,fusedImg)
      
 %       Cvejic_metric(origImgs,fusedImg)
     
