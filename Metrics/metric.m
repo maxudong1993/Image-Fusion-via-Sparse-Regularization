@@ -9,8 +9,8 @@ addpath('metrics/MI/');
 %     origImgs{k} = im2double(imread([folder, files(k).name]));
 % end
 
- input1 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockA.jpg'));
- input2= im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockB.jpg'));
+ input1 = im2double(imread('/Users/xudongma/phd/phd/code/data/clocks/clockA.jpg'));
+ input2= im2double(imread('/Users/xudongma/phd/phd/code/data/clocks/clockB.jpg'));
 
 % input1 = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\datafusion\1810i.bmp'));
 % input2 = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\datafusion\1810v.bmp'));
@@ -21,7 +21,7 @@ addpath('metrics/MI/');
     
 %fusedImg = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\fusion sr code\fused&sred\0010srfuse.bmp'));
 
-fusedImg = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/results/clocks/clockslam0.005.png'));
+fusedImg = im2double(imread('/Users/xudongma/phd/phd/code/data/results/clocks/clockslam0.005.png'));
 
 % % quality assessment
 %     % ---------------------------------------------------------------------

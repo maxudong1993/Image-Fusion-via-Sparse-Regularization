@@ -7,14 +7,14 @@ getd = @(p)path(p,path);
 getd('Metrics/');
 addpath('utilities/');
 
-resultDir = '/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/results/';
+resultDir = '/Users/xudongma/phd/phd/code/data/results/';
 seq = 'clocks';
 
 %original image data
 z2colour = [];
 if strcmp(seq, 'clocks')
-    z1 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockA.jpg'));
-    z2 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/clocks/clockB.jpg'));
+    z1 = im2double(imread('/Users/xudongma/phd/phd/code/data/clocks/clockA.jpg'));
+    z2 = im2double(imread('/Users/xudongma/phd/phd/code/data/clocks/clockB.jpg'));
 % elseif strcmp(seq, 'ICPR')
 %     z1 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/ICPR/VIS1.png'));
 %     z2 = im2double(imread('/Users/xudongma/phd/phd/code/Image-Fusion-via-Sparse-Regularization/data/ICPR/IR1.png'));
