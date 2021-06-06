@@ -21,7 +21,7 @@ addpath('metrics/MI/');
     
 %fusedImg = im2double(imread('\\ads.bris.ac.uk\filestore\myfiles\students\eexjc\Desktop\fusion sr code\fused&sred\0010srfuse.bmp'));
 
-fusedImg = im2double(imread('/Users/xudongma/phd/phd/code/data/results/clocks/clockslam0.005.png'));
+fusedImg = im2double(imread('/Users/xudongma/phd/phd/code/data/results/clocks/sr_sym9_L2loss_noNorm_clock.jpg'));
 
 % % quality assessment
 %     % ---------------------------------------------------------------------
